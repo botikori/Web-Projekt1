@@ -41,11 +41,12 @@ body
     width: 100%;
 }
 .foetelek{
-    width: 1100px;
-    height: 465px;
+    max-width: 1100px;
+    max-height: 465px;
     background-color: rgb(135 125 125/80%);
     display: block;
     margin: auto;
+    padding-bottom: 10px;
 }
 .foetelek h1{
     text-align: center;
@@ -58,6 +59,8 @@ body
     gap: 10px;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    
+
 }
 
 h2,p,span{
@@ -73,8 +76,10 @@ p{
 }
 .etel{
     background-color: #D9D9D9;
-    width: 250px;
+    flex-basis: 250px;
     box-shadow: 1px 2px 10px black;
+    display: flex;
+    flex-direction: column;
 }
 span{
     display: block;
