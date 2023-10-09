@@ -42,7 +42,7 @@ body
 }
 .foetelek{
     max-width: 1100px;
-    max-height: 465px;
+    min-height: 465px;
     background-color: rgb(135 125 125/80%);
     display: block;
     margin: auto;
