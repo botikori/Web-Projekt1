@@ -29,6 +29,10 @@ body
     background-color: #ddd;
     color: black;
 }
+.navbar a.aktual{
+    padding-bottom: 2px;
+    background-color: grey;
+}
 
 .navbar img 
 {
