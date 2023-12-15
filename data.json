@@ -1,0 +1,86 @@
+[
+    {
+        "etelneve": "Csirkepaprikás",
+        "leiras": "Egy népszerű magyar fogás, melyben a csirkét paprikás tejfölös szósszal tálalják, általában nokedlivel vagy galuskával.",
+        "tipus": "Foétel",
+        "ar": 2400,
+        "kep": "asd"
+    },
+    {
+        "etelneve": "Paprikás krumpli",
+        "leiras": "Egy egyszerű, de ízletes magyar étel, amely burgonyából, hagymából és erős paprikából készül, gyakran kolbásszal vagy virslivel kiegészítve.",
+        "tipus": "Foétel",
+        "ar": 2200,
+        "kep": "asd"
+    },
+    {
+        "etelneve": "Töltött Káposzta",
+        "leiras": "Egy hagyományos magyar fogás, ahol káposztaleveleket töltik meg fűszeres húsos töltelékkel és paradicsomszósszal főzik.",
+        "tipus": "Foétel",
+        "ar": 2600,
+        "kep": "asd"
+    },
+    {
+        "etelneve": "Rakott Burgonya",
+        "leiras": "Egy réteges burgonyaétel, amelyben a burgonyát sajttal és hússal vagy sonkával rétegezik, majd sütik.",
+        "tipus": "Foétel",
+        "ar": 3000,
+        "kep": "asd"
+    },
+    {
+        "etelneve": "Pörkölt",
+        "leiras": "Egy húsos étel, amelyet hagymával és erős paprikával készítenek, és általában sűrűbb, mint a gulyásleves.",
+        "tipus": "Foétel",
+        "ar": 2700,
+        "kep": "asd"
+    },
+    {
+        "etelneve": "Hurka/Kolbász",
+        "leiras": "Húsos vékony vagy vastag hüvelykujjszerű hagyományos magyar kolbász vagy hurka, amelyet sütnek vagy főznek.",
+        "tipus": "Foétel",
+        "ar": 2400,
+        "kep": "asd"
+    },
+    {
+        "etelneve": "Gulyás leves",
+        "leiras": "A hagyományos magyar étel, amely tartalmas húsleves, erős paprikával és zöldségekkel, általában marhahússal készül.",
+        "tipus": "Leves",
+        "ar": 2500,
+        "kep": "asd"
+    },
+    {
+        "etelneve": "Babgulyás",
+        "leiras": "Egy másik magyar klasszikus, ami egy sűrű és fűszeres leves, amit bab és hús (általában sertés vagy kolbász) alkot.",
+        "tipus": "Leves",
+        "ar": 1900,
+        "kep": "asd"
+    },
+    {
+        "etelneve": "Halászlé",
+        "leiras": "Egy pikáns halászleves, amelyet friss halból és erős paprikából készítenek, és az egyik ikonikus étel a magyar konyhában.",
+        "tipus": "Leves",
+        "ar": 2600,
+        "kep": "asd"
+    },
+    {
+        "etelneve": "Somlói Galuska",
+        "leiras": "Egy híres magyar desszert, amely háromféle piskótalapot, diót, csokoládét és tejszínt tartalmaz, általában tejszínhabbal és csokoládéöntettel tálalva.",
+        "tipus": "Desszert",
+        "ar": 1600,
+        "kep": "asd"
+    },
+    {
+        "etelneve": "Madártej",
+        "leiras": "Egy könnyű és édes magyar desszert, amely tojásfehérjéből készül és vaníliás tejfölös szósszal öntik le.",
+        "tipus": "Desszert",
+        "ar": 1800,
+        "kep": "asd"
+    },
+    {
+        "etelneve": "Túrórudi",
+        "leiras": "Egy népszerű magyar édesség, amely túróból és csokoládéból készül, és egy rétegben össze van tekerve.",
+        "tipus": "Desszert",
+        "ar": 1100,
+        "kep": "asd"
+    }
+]
