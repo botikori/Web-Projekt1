@@ -14,7 +14,8 @@
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <a class="navbar-brand" href="admin.html">Adminisztráció</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -78,7 +79,46 @@
                 <td>
                   <div class="btn-group " role="group" aria-label="Basic mixed styles example">
                     <button type="button" class="btn btn-danger">🗑️</button>
-                    <button type="button" class="btn btn-warning">✏️</button>
+                    <button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                      data-bs-target="#exampleModal">✏️</button>
+
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                      aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Étel szerkesztése</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <form class="row">
+                              <div class="col-6">
+                                <label for="edit-name" class="form-label">Név:</label>
+                                <input type="text" name="edit-name" id="edit-name" class="form-control">
+                                
+                              </div>
+                              <div class="col-6">
+                                <label for="edit-price" class="form-label">Ár:</label>
+                                <input type="number" name="edit-price" id="edit-price" class="form-control">
+                              </div>
+                              <div class="col-12">
+                                <label for="edit-category" class="form-label">Ár:</label>
+                                <select name="edit-category" id="edit-category" class="form-select">
+                                  <option>Főétel</option>
+                                  <option>Desszert</option>
+                                  <option>Leves</option>
+                                </select>
+                              </div>
+                            </form>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Bezárás</button>
+                            <button type="button" class="btn btn-primary">Változtatások mentése</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
                   </div>
                 </td>
               </tr>
