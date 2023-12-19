@@ -2,42 +2,42 @@
     {
         "etelneve": "Csirkepaprikás",
         "leiras": "Egy népszerű magyar fogás, melyben a csirkét paprikás tejfölös szósszal tálalják, általában nokedlivel vagy galuskával.",
-        "tipus": "Foétel",
+        "tipus": "Főétel",
         "ar": 2400,
         "kep": "asd"
     },
     {
         "etelneve": "Paprikás krumpli",
         "leiras": "Egy egyszerű, de ízletes magyar étel, amely burgonyából, hagymából és erős paprikából készül, gyakran kolbásszal vagy virslivel kiegészítve.",
-        "tipus": "Foétel",
+        "tipus": "Főétel",
         "ar": 2200,
         "kep": "asd"
     },
     {
         "etelneve": "Töltött Káposzta",
         "leiras": "Egy hagyományos magyar fogás, ahol káposztaleveleket töltik meg fűszeres húsos töltelékkel és paradicsomszósszal főzik.",
-        "tipus": "Foétel",
+        "tipus": "Főétel",
         "ar": 2600,
         "kep": "asd"
     },
     {
         "etelneve": "Rakott Burgonya",
         "leiras": "Egy réteges burgonyaétel, amelyben a burgonyát sajttal és hússal vagy sonkával rétegezik, majd sütik.",
-        "tipus": "Foétel",
+        "tipus": "Főétel",
         "ar": 3000,
         "kep": "asd"
     },
     {
         "etelneve": "Pörkölt",
         "leiras": "Egy húsos étel, amelyet hagymával és erős paprikával készítenek, és általában sűrűbb, mint a gulyásleves.",
-        "tipus": "Foétel",
+        "tipus": "Főétel",
         "ar": 2700,
         "kep": "asd"
     },
     {
         "etelneve": "Hurka/Kolbász",
         "leiras": "Húsos vékony vagy vastag hüvelykujjszerű hagyományos magyar kolbász vagy hurka, amelyet sütnek vagy főznek.",
-        "tipus": "Foétel",
+        "tipus": "Főétel",
         "ar": 2400,
         "kep": "asd"
     },
