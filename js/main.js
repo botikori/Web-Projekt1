@@ -1,8 +1,10 @@
 "use strict";
 
-let etelek = [];
+let foods = [];
 
-fetch("http://localhost:8888/etelek").then(response => response.json()).then(data => etelek = data).then(showDatas);
+fetch("http://localhost:8888/etelek").then(response => response.json()).then(data => foods = data).then(data => showDatas(data));
+
+let categories = ["Főétel","Desszert","Leves"]
 
 function showDatas(data) {
     const tbody = document.querySelector("#tbody");
@@ -10,70 +12,71 @@ function showDatas(data) {
         tbody.firstChild.remove();
     }
     
-    for(const item of etelek){
+    let i = 0;
+    for(const item of data){
 
-        var tableRow = document.createElement('tr');
+        const tableRow = document.createElement('tr');
     
     
-        var dishNameCell = document.createElement('td');
+        const dishNameCell = document.createElement('td');
         dishNameCell.textContent = item["etelneve"];
         tableRow.append(dishNameCell);
     
-        var badgeCell = document.createElement('td');
-        var badgeSpan = document.createElement('span');
+        const badgeCell = document.createElement('td');
+        const badgeSpan = document.createElement('span');
         badgeSpan.className = 'badge bg-success';
         badgeSpan.textContent = item["tipus"];
         badgeCell.append(badgeSpan);
         tableRow.append(badgeCell);
     
     
-        var priceCell = document.createElement('td');
+        const priceCell = document.createElement('td');
         priceCell.textContent = item["ar"]+" Ft";
         tableRow.append(priceCell);
     
     
-        var buttonsCell = document.createElement('td');
-        var btnGroupDiv = document.createElement('div');
+        const buttonsCell = document.createElement('td');
+        const btnGroupDiv = document.createElement('div');
         btnGroupDiv.className = 'btn-group';
         btnGroupDiv.setAttribute('role', 'group');
         btnGroupDiv.setAttribute('aria-label', 'Basic mixed styles example');
     
-        var deleteButton = document.createElement('button');
+        const deleteButton = document.createElement('button');
         deleteButton.setAttribute('type', 'button');
         deleteButton.className = 'btn btn-danger';
         deleteButton.textContent = '🗑️';
         btnGroupDiv.append(deleteButton);
     
-        var editButton = document.createElement('button');
+        const editButton = document.createElement('button');
         editButton.setAttribute('type', 'button');
         editButton.className = 'btn btn-warning';
         editButton.setAttribute('data-bs-toggle', 'modal');
-        editButton.setAttribute('data-bs-target', '#exampleModal');
+        editButton.setAttribute('data-bs-target', `#exampleModal_${i}`);
         editButton.textContent = '✏️';
         btnGroupDiv.append(editButton);
     
-        var modalDiv = document.createElement('div');
+        const modalDiv = document.createElement('div');
         modalDiv.className = 'modal fade';
-        modalDiv.setAttribute('id', 'exampleModal');
+        modalDiv.setAttribute('id', `exampleModal_${i}`);
         modalDiv.setAttribute('tabindex', '-1');
         modalDiv.setAttribute('aria-labelledby', 'exampleModalLabel');
         modalDiv.setAttribute('aria-hidden', 'true');
     
-        var modalDialogDiv = document.createElement('div');
+        const modalDialogDiv = document.createElement('div');
         modalDialogDiv.className = 'modal-dialog';
     
-        var modalContentDiv = document.createElement('div');
+        const modalContentDiv = document.createElement('div');
         modalContentDiv.className = 'modal-content';
     
-        var modalHeaderDiv = document.createElement('div');
+        const modalHeaderDiv = document.createElement('div');
         modalHeaderDiv.className = 'modal-header';
     
-        var modalTitle = document.createElement('h1');
+        const modalTitle = document.createElement('h1');
         modalTitle.className = 'modal-title fs-5';
         modalTitle.setAttribute('id', 'exampleModalLabel');
-        modalTitle.textContent = 'Étel szerkesztése';
+        modalTitle.textContent = `${item.etelneve} szerkesztése`;
     
-        var closeButton = document.createElement('button');
+        const closeButton = document.createElement('button');
         closeButton.setAttribute('type', 'button');
         closeButton.className = 'btn-close';
         closeButton.setAttribute('data-bs-dismiss', 'modal');
@@ -82,24 +85,96 @@ function showDatas(data) {
         modalHeaderDiv.append(modalTitle);
         modalHeaderDiv.append(closeButton);
     
-        var modalBodyDiv = document.createElement('div');
+        const modalBodyDiv = document.createElement('div');
         modalBodyDiv.className = 'modal-body';
-        var formRow = document.createElement('form');
+
+        
+        const nameLabel = document.createElement("label");
+        nameLabel.classList.add("form-label","my-2");
+        nameLabel.htmlFor=`name_${i}`
+        nameLabel.textContent = "Étel neve:"
+        const nameInput = document.createElement("input");
+        nameInput.value = item.etelneve;
+        nameInput.type = "text";
+        nameInput.id = `name_${i}`;
+        nameInput.classList.add("form-control")
+        nameInput.setAttribute("disabled","")
+
+       
+        const categoryLabel = document.createElement("label");
+        categoryLabel.classList.add("form-label","my-2");
+        categoryLabel.htmlFor=`categories_${i}`
+        categoryLabel.textContent = "Étel kategóriája:"
+        const categorySelect = document.createElement("select");
+        categorySelect.id = `categories_${i}`;
+        categorySelect.classList.add("form-select")
+        for(const category of categories){
+            if(item.tipus == category){
+                categorySelect.innerHTML += `<option value="${category}" selected>${category}</option>`;
+            }
+        }
+        categorySelect.setAttribute("disabled","") 
+
+        const priceLabel = document.createElement("label");
+        priceLabel.classList.add("form-label","my-2");
+        priceLabel.htmlFor=`price_${i}`;
+        priceLabel.textContent = "Étel ára:"
+        const priceInput = document.createElement("input");
+        priceInput.value=item.ar;
+        priceInput.type = "number";
+        priceInput.id = `price_${i}`;
+        priceInput.classList.add("form-control")
+
+        const descLabel = document.createElement("label");
+        descLabel.classList.add("form-label","my-2");
+        descLabel.htmlFor=`description_${i}`;
+        descLabel.textContent = "Étel leírása:"
+        const descInput = document.createElement("input");
+        descInput.type = "text";
+        descInput.value = item.leiras;
+        descInput.id = `description_${i}`;
+        descInput.classList.add("form-control")
+
+        modalBodyDiv.append(nameLabel,nameInput,categoryLabel,categorySelect,priceLabel,priceInput,descLabel,descInput)
+
+        const formRow = document.createElement('form');
         formRow.className = 'row';
     
-        var modalFooterDiv = document.createElement('div');
+        const modalFooterDiv = document.createElement('div');
         modalFooterDiv.className = 'modal-footer';
     
-        var closeBtnModal = document.createElement('button');
+        const closeBtnModal = document.createElement('button');
         closeBtnModal.setAttribute('type', 'button');
         closeBtnModal.className = 'btn btn-danger';
         closeBtnModal.setAttribute('data-bs-dismiss', 'modal');
         closeBtnModal.textContent = 'Bezárás';
     
-        var saveChangesBtn = document.createElement('button');
+        const saveChangesBtn = document.createElement('button');
         saveChangesBtn.setAttribute('type', 'button');
         saveChangesBtn.className = 'btn btn-primary';
         saveChangesBtn.textContent = 'Változtatások mentése';
+
+        saveChangesBtn.addEventListener("click",function(){
+
+            fetch(`http://localhost:8888/etelek/${item.id}`,{
+                method: "PUT",
+                headers: {
+                    "Accept": "application/json",
+                    "Content-Type":"application/json"
+                },
+                body:
+                    JSON.stringify({etelneve: nameInput.value,tipus:categorySelect.value,kep:item.kep,ar: priceInput.value,leiras:descInput.value})
+            })
+            .then(response=>response.json())
+            .then(()=>{
+                const index = foods.find(x=>x.id === item.id);
+                index.ar = priceInput.value;
+                index.leiras = descInput.value;
+                
+            })
+            .then(()=>showDatas(data)).then(location.reload())
+            
+        })
     
         modalFooterDiv.append(closeBtnModal);
         modalFooterDiv.append(saveChangesBtn);
@@ -117,6 +192,6 @@ function showDatas(data) {
         tableRow.append(buttonsCell);
     
         tbody.append(tableRow);
+        i++;
     }
-
 }
