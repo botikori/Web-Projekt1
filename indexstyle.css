@@ -23,3 +23,32 @@ body {
         margin: auto;
     }
 }
+
+.navbar{
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.logo{
+    width: 32%;
+    height: 32%;
+}
+
+.nav-link{
+    color: white;
+    margin-right: 60px;
+    vertical-align:middle;
+    font-size: 20px;
+}
+
+.nav-item{
+    color: white;
+    margin-right: 60px;
+    vertical-align:middle;
+    font-size: 20px;
+}
+
+.btn{
+    background-color: #dea828;
+    color: white;
+}
