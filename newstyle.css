@@ -1,6 +1,19 @@
-h1{
+h1 {
     font-size: 1.4rem;
+    margin-top: 12px;
 }
-body{
-    background-image: url("img/bg.jpg");
+.mt-3 {
+     margin-top: 0rem!important; 
 }
+
+body {
+    background: rgb(58,159,180);
+    background: linear-gradient(152deg, rgba(58,159,180,1) 0%, rgba(29,253,243,1) 50%, rgba(252,244,69,1) 100%);
+    min-height: 100vh;
+}
+
+.container{
+    background: rgb(221,197,208);
+    background: radial-gradient(circle, rgba(221,197,208,0.5690651260504201) 43%, rgba(148,187,233,0) 100%);    
+    min-height: 100vh;
+}    
