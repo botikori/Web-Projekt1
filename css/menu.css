@@ -1,0 +1,75 @@
+body {
+    font-family: 'Heebo', sans-serif;
+}
+nav{
+    background-color: #353536;
+}
+.btn{
+    background-color: #dea828;
+    color: white;
+}
+h1{
+    font-weight: bold;
+}
+h2{
+    font-size: 1.2rem;
+}
+h1,h2{
+    font-family: 'Merriweather', serif;
+    letter-spacing: 2px;
+}
+.logo{
+    width: 20%;
+    height: 20%;
+}
+@media (max-width: 990px) {
+    .logodiv {
+       display: none;
+    }
+}
+@media (max-width: 1130px) {
+    .btn {
+       margin-top: 8px;
+    }
+}
+.nav-link{
+    color: white;
+    margin-right: 60px;
+    vertical-align:middle;
+    font-size: 20px;
+}
+
+.nav-item{
+    color: white;
+    margin-right: 60px;
+    vertical-align:middle;
+    font-size: 20px;
+}
+.navbar{
+    margin-top: 0px;
+    padding-top: 0px;
+}
+#opciok{
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+#lista{
+    list-style: none;
+}
+#lista li{
+    display: inline-block;
+    padding: 20px;  
+}
+li:hover{
+    color: #c29210;
+    font-style: italic;
+}
+.active{
+    color: #c29210;
+}
+#kep {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

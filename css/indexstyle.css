@@ -9,7 +9,7 @@ body {
     padding: 10px 70px 10px 70px;
 }
 #bg {
-    background-image: linear-gradient(rgba(5, 46, 77, 0.8), rgba(5, 46, 77, 0.8)), url("img/indexbg.jpg");
+    background-image: linear-gradient(rgba(5, 46, 77, 0.8), rgba(5, 46, 77, 0.8)), url("/img/indexbg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -23,6 +23,12 @@ body {
         margin: auto;
     }
 }
+@media (max-width: 990px) {
+    .logodiv {
+       display: none;
+    }
+}
+
 
 .navbar{
     margin-top: 0px;
@@ -30,8 +36,8 @@ body {
 }
 
 .logo{
-    width: 32%;
-    height: 32%;
+    width: 20%;
+    height: 20%;
 }
 
 .nav-link{
@@ -51,4 +57,9 @@ body {
 .btn{
     background-color: #dea828;
     color: white;
+}
+@media (max-width: 1130px) {
+    .btn {
+       margin-top: 8px;
+    }
 }
