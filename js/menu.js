@@ -2,7 +2,9 @@
 
 let osszesEtel = [];
 
-fetch("http://localhost:8888/etelek").then(response => response.json()).then(data => osszesEtel = data).then(data => drawCard(data));
+let foetelek = [];
+let levesek = [];
+let desszertek = [];
 
 let hetfo = [];
 let kedd = [];
@@ -13,11 +15,173 @@ let szombat = [];
 let vasarnap = [];
 
 
-function drawCard(data) {
+function Sort(item)
+{
+        switch (item.tipus)
+        {
+            case "Főétel":
+                foetelek.push(item);
+                break;
+            case "Leves":
+                levesek.push(item);
+                break;
+            case "Desszert":
+                desszertek.push(item);
+                break;
+        }
+}
 
-    for(const item of osszesEtel){
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
 
-        const etelLista = document.querySelector("#etelek");
+function RandomValaszto(honnan,nap)
+{
+    let elso = getRandomInt(honnan.length);
+    nap.push(honnan[getRandomInt(elso)]);
+    let masodik = getRandomInt(honnan.length);
+    while (masodik==elso)
+    {
+        masodik = getRandomInt(honnan.length);
+    }
+    nap.push(honnan[getRandomInt(masodik)]);
+}
+
+function NapFeltoltes(nap)
+{
+    RandomValaszto(foetelek,nap);
+    RandomValaszto(levesek,nap);
+    RandomValaszto(desszertek,nap);
+}
+
+function NapokFeltoltese()
+{
+    NapFeltoltes(hetfo);
+    NapFeltoltes(kedd);
+    NapFeltoltes(szerda);
+    NapFeltoltes(csutortok);
+    NapFeltoltes(pentek);
+    NapFeltoltes(szombat);
+    NapFeltoltes(vasarnap);
+}
+
+fetch("http://localhost:8888/etelek").then(response => response.json()).then(data => data.forEach(elem => {
+    osszesEtel.push(elem);
+    Sort(elem);
+})).then(NapokFeltoltese)
+.then(() => NapKiiratas(1));
+
+let hetfoLi = document.querySelector("#hetfo");
+let keddLi = document.querySelector("#kedd");
+let szerdaLi = document.querySelector("#szerda");
+let csutortokLi = document.querySelector("#csutortok");
+let pentekLi = document.querySelector("#pentek");
+let szombatLi = document.querySelector("#szombat");
+let vasarnapLi = document.querySelector("#vasarnap");
+
+
+
+function NapKiiratas(id)
+{
+    ActiveRemover();
+    switch(id)
+    {
+        case 1:
+            drawCard(hetfo);
+            hetfoLi.classList.add("active");
+            break;
+        case 2:
+            drawCard(kedd);
+            keddLi.classList.add("active");
+            break;
+        case 3:
+            drawCard(szerda);
+            szerdaLi.classList.add("active");
+            break;
+        case 4:
+            drawCard(csutortok);
+            csutortokLi.classList.add("active");
+            break;
+        case 5:
+            drawCard(pentek);
+            pentekLi.classList.add("active");
+            break;
+        case 6:
+            drawCard(szombat);
+            szombatLi.classList.add("active");
+            break;
+        case 7:
+            drawCard(vasarnap);
+            vasarnapLi.classList.add("active");
+            break;
+    }
+}
+
+
+function ActiveRemover()
+{
+    if (hetfoLi.classList.contains("active"))
+    {
+        hetfoLi.classList.remove("active");
+    }
+    if (keddLi.classList.contains("active"))
+    {
+        keddLi.classList.remove("active");
+    }
+    if (szerdaLi.classList.contains("active"))
+    {
+        szerdaLi.classList.remove("active");
+    }
+    if (csutortokLi.classList.contains("active"))
+    {
+        csutortokLi.classList.remove("active");
+    }
+    if (pentekLi.classList.contains("active"))
+    {
+        pentekLi.classList.remove("active");
+    }
+    if (szombatLi.classList.contains("active"))
+    {
+        szombatLi.classList.remove("active");
+    }
+    if (vasarnapLi.classList.contains("active"))
+    {
+        vasarnapLi.classList.remove("active");
+    }
+}
+
+
+hetfoLi.addEventListener("click",function(){
+    NapKiiratas(1);
+});
+keddLi.addEventListener("click",function(){
+    NapKiiratas(2);
+});
+szerdaLi.addEventListener("click",function(){
+    NapKiiratas(3);
+});
+csutortokLi.addEventListener("click",function(){
+    NapKiiratas(4);
+});
+pentekLi.addEventListener("click",function(){
+    NapKiiratas(5);
+});
+szombatLi.addEventListener("click",function(){
+    NapKiiratas(6);
+});
+vasarnapLi.addEventListener("click",function(){
+    NapKiiratas(7);
+});
+
+function drawCard(kiiratandoTomb) {
+
+    const etelLista = document.querySelector("#etelek");
+    while (etelLista.firstChild)
+    {
+        etelLista.firstChild.remove();
+    }
+    for(const item of kiiratandoTomb){
+
         
         const div = document.createElement('div');
         div.className = 'col-md-6 my-2';

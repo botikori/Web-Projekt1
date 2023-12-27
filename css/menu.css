@@ -73,3 +73,12 @@ li:hover{
     height: 100%;
     object-fit: cover;
 }
+.etel:hover{
+    transform: scale(1.05);
+}
+.etel:hover h5, .etel:hover span{
+    color: red;
+}
+.etel:hover span{
+    text-decoration: underline;
+}
