@@ -94,5 +94,29 @@
         "tipus": "Desszert",
         "ar": 1100,
         "kep": "img/desszertek/turorudi.jpg"
+    },
+    {
+        "id":12,
+        "etelneve": "Citromkrém vaníliapudinggal és cseresznyével",
+        "leiras": "A citromkrém édesen kontrasztos íze a vaníliapudinggal és friss cseresznyével tökéletes harmóniát teremt az ételben.",
+        "tipus": "Desszert",
+        "ar": 1600,
+        "kep": "img/desszertek/citromkrem.jpg"
+    },
+    {
+        "id": 13,
+        "etelneve": "Csokis brownie cseresznyével",
+        "leiras": "Az intenzív csokoládé íze és a friss cseresznyék lédús édességgel töltik meg a csokis brownie-t, egy igazi különlegességet teremtve.",
+        "tipus": "Desszert",
+        "ar": 1100,
+        "kep": "img/desszertek/brownie.jpg"
+    },
+    {
+        "id": 14,
+        "etelneve": "Betűleves",
+        "leiras": "A betűleves játékosan keveri a betű alakú tésztát és ízletes zöldségeket, vidám és ízletes étel élményt adva minden falatnál.",
+        "tipus": "Leves",
+        "ar": 1000,
+        "kep": "img/levesek/betuleves.jpg"
     }
 ]
