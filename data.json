@@ -1,5 +1,6 @@
 [
     {
+        "id":0,
         "etelneve": "Csirkepaprikás",
         "leiras": "Egy népszerű magyar fogás, melyben a csirkét paprikás tejfölös szósszal tálalják, általában nokedlivel vagy galuskával.",
         "tipus": "Főétel",
@@ -7,6 +8,7 @@
         "kep": "img/foetelek/csirkepaprikas.jpg"
     },
     {
+        "id":1,
         "etelneve": "Paprikás krumpli",
         "leiras": "Egy egyszerű, de ízletes magyar étel, amely burgonyából, hagymából és erős paprikából készül, gyakran kolbásszal vagy virslivel kiegészítve.",
         "tipus": "Főétel",
@@ -14,6 +16,7 @@
         "kep": "img/foetelek/paprikaskrumpli.jpg"
     },
     {
+        "id":2,
         "etelneve": "Töltött Káposzta",
         "leiras": "Egy hagyományos magyar fogás, ahol káposztaleveleket töltik meg fűszeres húsos töltelékkel és paradicsomszósszal főzik.",
         "tipus": "Főétel",
@@ -21,6 +24,7 @@
         "kep": "img/foetelek/toltottkaposzta.jpg"
     },
     {
+        "id":3,
         "etelneve": "Rakott Burgonya",
         "leiras": "Egy réteges burgonyaétel, amelyben a burgonyát sajttal és hússal vagy sonkával rétegezik, majd sütik.",
         "tipus": "Főétel",
@@ -28,6 +32,7 @@
         "kep": "img/foetelek/rakottkrumpli.jpg"
     },
     {
+        "id":4,
         "etelneve": "Pörkölt",
         "leiras": "Egy húsos étel, amelyet hagymával és erős paprikával készítenek, és általában sűrűbb, mint a gulyásleves.",
         "tipus": "Főétel",
@@ -35,6 +40,7 @@
         "kep": "img/foetelek/porkolt.jpg"
     },
     {
+        "id":5,
         "etelneve": "Hurka/Kolbász",
         "leiras": "Húsos vékony vagy vastag hüvelykujjszerű hagyományos magyar kolbász vagy hurka, amelyet sütnek vagy főznek.",
         "tipus": "Főétel",
@@ -42,6 +48,7 @@
         "kep": "img/foetelek/hurka.jpg"
     },
     {
+        "id":6,
         "etelneve": "Gulyás leves",
         "leiras": "A hagyományos magyar étel, amely tartalmas húsleves, erős paprikával és zöldségekkel, általában marhahússal készül.",
         "tipus": "Leves",
@@ -49,6 +56,7 @@
         "kep": "img/levesek/gulyasleves.jpg"
     },
     {
+        "id":7,
         "etelneve": "Babgulyás",
         "leiras": "Egy másik magyar klasszikus, ami egy sűrű és fűszeres leves, amit bab és hús (általában sertés vagy kolbász) alkot.",
         "tipus": "Leves",
@@ -56,6 +64,7 @@
         "kep": "img/levesek/babgulyas.jpeg"
     },
     {
+        "id":8,
         "etelneve": "Halászlé",
         "leiras": "Egy pikáns halászleves, amelyet friss halból és erős paprikából készítenek, és az egyik ikonikus étel a magyar konyhában.",
         "tipus": "Leves",
@@ -63,6 +72,7 @@
         "kep": "img/levesek/halaszle.jpeg"
     },
     {
+        "id":9,
         "etelneve": "Somlói Galuska",
         "leiras": "Egy híres magyar desszert, amely háromféle piskótalapot, diót, csokoládét és tejszínt tartalmaz, általában tejszínhabbal és csokoládéöntettel tálalva.",
         "tipus": "Desszert",
@@ -70,6 +80,7 @@
         "kep": "img/desszertek/somloigaluska.jpg"
     },
     {
+        "id":10,
         "etelneve": "Madártej",
         "leiras": "Egy könnyű és édes magyar desszert, amely tojásfehérjéből készül és vaníliás tejfölös szósszal öntik le.",
         "tipus": "Desszert",
@@ -77,10 +88,35 @@
         "kep": "img/desszertek/madartej.jpg"
     },
     {
+        "id":11,
         "etelneve": "Túrórudi",
         "leiras": "Egy népszerű magyar édesség, amely túróból és csokoládéból készül, és egy rétegben össze van tekerve.",
         "tipus": "Desszert",
         "ar": 1100,
         "kep": "img/desszertek/turorudi.jpg"
+    },
+    {
+        "id":12,
+        "etelneve": "Citromkrém vaníliapudinggal és cseresznyével",
+        "leiras": "A citromkrém édesen kontrasztos íze a vaníliapudinggal és friss cseresznyével tökéletes harmóniát teremt az ételben.",
+        "tipus": "Desszert",
+        "ar": 1600,
+        "kep": "img/desszertek/citromkrem.jpg"
+    },
+    {
+        "id": 13,
+        "etelneve": "Csokis brownie cseresznyével",
+        "leiras": "Az intenzív csokoládé íze és a friss cseresznyék lédús édességgel töltik meg a csokis brownie-t, egy igazi különlegességet teremtve.",
+        "tipus": "Desszert",
+        "ar": 1100,
+        "kep": "img/desszertek/brownie.jpg"
+    },
+    {
+        "id": 14,
+        "etelneve": "Betűleves",
+        "leiras": "A betűleves játékosan keveri a betű alakú tésztát és ízletes zöldségeket, vidám és ízletes étel élményt adva minden falatnál.",
+        "tipus": "Leves",
+        "ar": 1000,
+        "kep": "img/levesek/betuleves.jpg"
     }
 ]
