@@ -38,13 +38,13 @@ function getRandomInt(max) {
 function RandomValaszto(honnan,nap)
 {
     let elso = getRandomInt(honnan.length);
-    nap.push(honnan[getRandomInt(elso)]);
+    nap.push(honnan[elso]);
     let masodik = getRandomInt(honnan.length);
     while (masodik==elso)
     {
         masodik = getRandomInt(honnan.length);
     }
-    nap.push(honnan[getRandomInt(masodik)]);
+    nap.push(honnan[masodik]);
 }
 
 function NapFeltoltes(nap)
