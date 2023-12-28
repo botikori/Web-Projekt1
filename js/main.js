@@ -2,18 +2,18 @@
 
 let foods = [];
 
-fetch("http://localhost:8888/etelek").then(response => response.json()).then(data => foods = data).then(data => showDatas(data));
+fetch("http://localhost:8888/etelek").then(response => response.json()).then(data => foods = data).then(showDatas);
 
 let categories = ["Főétel","Desszert","Leves"]
 
-function showDatas(data) {
+function showDatas() {
     const tbody = document.querySelector("#tbody");
     while(tbody.firstChild){
         tbody.firstChild.remove();
     }
     
     let i = 0;
-    for(const item of data){
+    for(const item of foods){
 
         const tableRow = document.createElement('tr');
     
@@ -172,7 +172,7 @@ function showDatas(data) {
                 index.leiras = descInput.value;
                 
             })
-            .then(()=>showDatas(data)).then(location.reload())
+            .then(location.reload());
             
         })
     
