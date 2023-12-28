@@ -40,11 +40,14 @@ function RandomValaszto(honnan,nap)
     let elso = getRandomInt(honnan.length);
     nap.push(honnan[elso]);
     let masodik = getRandomInt(honnan.length);
-    while (masodik==elso)
+    if (honnan.length >= 2)
     {
-        masodik = getRandomInt(honnan.length);
+        while (masodik == elso) {
+            masodik = getRandomInt(honnan.length);
+        }
+        nap.push(honnan[masodik]);
     }
-    nap.push(honnan[masodik]);
+    
 }
 
 function NapFeltoltes(nap)
