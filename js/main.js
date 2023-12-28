@@ -46,6 +46,18 @@ function showDatas() {
         deleteButton.className = 'btn btn-danger';
         deleteButton.textContent = '🗑️';
         btnGroupDiv.append(deleteButton);
+        deleteButton.addEventListener("click", function()
+        {
+            fetch(`http://localhost:8888/etelek/${item.id}`, {
+                method: "DELETE"
+            })
+                .then(response => response.json())
+                .then(() => {
+                    const index = foods.findIndex(d => d.id === item.id);
+                    foods.splice(index, 1);
+                })
+                .then(showDatas)
+        });
     
         const editButton = document.createElement('button');
         editButton.setAttribute('type', 'button');
@@ -194,4 +206,28 @@ function showDatas() {
         tbody.append(tableRow);
         i++;
     }
+}
+
+document.querySelector("#letrehoz").addEventListener("click", PostData);
+
+function PostData()
+{
+    const nev = document.querySelector("#nev").value;
+    const leiras = document.querySelector("#leiras").value;
+    const ar = document.querySelector("#ar").value;
+    const kategoria = document.querySelector("#kategoria").value;
+
+    
+    fetch("http://localhost:8888/etelek", {
+        method: "POST",
+        headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({etelneve: nev,tipus:kategoria,kep:"./img/ujetel.jpg",ar: ar,leiras:leiras})
+    })
+    .then(response=>response.json())
+    .then(data => foods.push(data))
+    .then(showDatas)
+    
 }
