@@ -1,7 +1,9 @@
 h1 {
     font-size: 1.4rem;
     padding-top: 12px;
+    font-weight: bolder;
 }
+
 .mt-3 {
     margin-top: 0rem !important; 
 }
@@ -11,10 +13,12 @@ body {
 }
 
 .container{
+    margin-top: 1rem;
     background-color: #9ea5b0;
     background: #e0e0e0;
     box-shadow:  16px 16px 33px #c3c3c3,
              -16px -16px 33px #fdfdfd;
+    border-radius: 10px;
 }    
 
 nav {
